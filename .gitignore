@@ -4,3 +4,5 @@ terraform.tfstate
 terraform-tfvars
 .terraform/
 backend.hcl
+*.tfvars
+.terraform/
