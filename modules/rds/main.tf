@@ -10,6 +10,7 @@ resource "aws_db_instance" "gogs_db" {
   db_subnet_group_name   = var.subnet_group_name
   skip_final_snapshot    = var.skip_final_snapshot
   publicly_accessible    = var.publicly_accessible
+  db_name                = var.db_name
 
   backup_retention_period = var.backup_retention_period
   multi_az                = var.multi_az

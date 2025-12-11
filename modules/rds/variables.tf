@@ -64,3 +64,9 @@ variable "multi_az" {
   type    = bool
   default = false
 }
+
+variable "db_name" {
+  description = "Name of the initial database to create"
+  type        = string
+  default     = "gogs"
+}

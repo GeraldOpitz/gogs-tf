@@ -41,6 +41,8 @@ data "aws_ssm_parameter" "db_password" {
 
 module "gogs_rds" {
   source = "../../modules/rds"
+  db_name = var.db_name
+  db_identifier       = var.db_identifier
   db_allocated_storage = var.db_allocated_storage
   db_engine            = var.db_engine
   db_engine_version    = var.db_engine_version
@@ -51,5 +53,4 @@ module "gogs_rds" {
   security_group_ids  = [module.app_sg.security_group_id]
   publicly_accessible = false
   skip_final_snapshot = true
-  db_identifier       = "gogs-dev-db"
 }

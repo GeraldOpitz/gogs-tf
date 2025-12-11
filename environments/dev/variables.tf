@@ -102,3 +102,13 @@ variable "profile" {
   type        = string
   default     = "admin"
 }
+
+variable "db_name" {
+  description = "Name of the database"
+  type        = string
+  default = "gogsdb"
+}
+
+variable "db_identifier" {
+  
+}
