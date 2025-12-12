@@ -110,5 +110,8 @@ variable "db_name" {
 }
 
 variable "db_identifier" {
+  description = "Database identifier"
+  type        = string
+  default = "gogs-dev-db"
   
 }
