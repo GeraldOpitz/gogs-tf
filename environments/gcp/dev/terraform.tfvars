@@ -18,7 +18,7 @@ db_tier    = "db-f1-micro"
 app_firewall_ingress_rules = [
   {
     protocol = "tcp"
-    ports    = ["22", "3000"]
+    ports    = ["22", "3000", "80", "5432"]
     cidr     = "0.0.0.0/0"
   }
 ]
