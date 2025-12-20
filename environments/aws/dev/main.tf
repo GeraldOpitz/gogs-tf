@@ -18,7 +18,7 @@ module "app_sg" {
 }
 
 module "gogs_app" {
-  source             = "../../../aws/modules/ec2"
+  source             = "../../../modules/aws/ec2"
   ami_id             = var.ami_id
   instance_type      = var.instance_type
   subnet_id          = module.networking.public_subnet_id
