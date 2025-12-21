@@ -53,3 +53,8 @@ variable "db_version" {
 variable "db_tier" {
   type = string
 }
+
+variable "ssh_public_key_path" {
+  type        = string
+  description = "Path to GCP SSH public key"
+}

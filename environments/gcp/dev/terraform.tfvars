@@ -15,6 +15,7 @@ db_name    = "gogs-db"
 db_version = "POSTGRES_15"
 db_tier    = "db-f1-micro"
 
+
 app_firewall_ingress_rules = [
   {
     protocol = "tcp"
@@ -22,3 +23,6 @@ app_firewall_ingress_rules = [
     cidr     = "0.0.0.0/0"
   }
 ]
+
+ssh_public_key_path = "../../../keys/gcp-gogs-key.pub"
+
