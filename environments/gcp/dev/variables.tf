@@ -55,6 +55,6 @@ variable "db_tier" {
 }
 
 variable "ssh_public_key" {
-  description = "SSH public key for GCP VM access"
-  type        = string
+  type = string
 }
+

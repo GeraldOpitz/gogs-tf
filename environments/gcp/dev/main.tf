@@ -30,7 +30,8 @@ module "gogs_app" {
   machine_type  = var.machine_type
 
   tags = ["gogs-app"]
-  ssh_public_key_path = "/var/jenkins_home/.ssh/gcp_vm_key.pub"
+  ssh_public_key = var.ssh_public_key
+
 }
 
 data "google_secret_manager_secret_version" "db-username" {

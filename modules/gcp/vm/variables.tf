@@ -39,8 +39,8 @@ variable "image" {
   default     = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
 
-variable "ssh_public_key_path" {
-  description = "Path to the public SSH key to allow access to the VM"
+variable "ssh_public_key" {
   type        = string
+  description = "SSH public key for ubuntu user"
 }
 
