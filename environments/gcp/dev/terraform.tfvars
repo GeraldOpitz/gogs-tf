@@ -23,3 +23,5 @@ app_firewall_ingress_rules = [
     cidr     = "0.0.0.0/0"
   }
 ]
+
+ssh_public_key = "${file("/var/jenkins_home/.ssh/gcp_vm_key.pub")}"

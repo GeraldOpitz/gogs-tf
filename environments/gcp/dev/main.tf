@@ -28,9 +28,9 @@ module "gogs_app" {
   subnet     = module.networking.app_subnet_name
 
   machine_type  = var.machine_type
-  ssh_public_key = var.ssh_public_key
 
   tags = ["gogs-app"]
+  ssh_public_key_path = "/var/jenkins_home/.ssh/gcp_vm_key.pub"
 }
 
 data "google_secret_manager_secret_version" "db-username" {
