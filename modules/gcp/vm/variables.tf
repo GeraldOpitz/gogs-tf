@@ -39,7 +39,7 @@ variable "image" {
   default     = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
 
-variable "ssh_public_key_path" {
+variable "ssh_public_key" {
+  description = "SSH public key content"
   type        = string
-  description = "Path to GCP SSH public key"
 }

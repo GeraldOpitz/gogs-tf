@@ -23,6 +23,3 @@ app_firewall_ingress_rules = [
     cidr     = "0.0.0.0/0"
   }
 ]
-
-ssh_public_key_path = "../../../keys/gcp-gogs-key.pub"
-
