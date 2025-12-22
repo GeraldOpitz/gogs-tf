@@ -1,5 +1,5 @@
 module "networking" {
-  source             = "../../modules/networking"
+  source             = "../../../modules/aws/networking"
   project_name       = var.project_name
   vpc_cidr           = var.vpc_cidr
   public_subnet_cidr = var.public_subnet_cidr
@@ -10,7 +10,7 @@ module "networking" {
 }
 
 module "app_sg" {
-  source = "../../modules/security_groups"
+  source = "../../../modules/aws/security_groups"
   name   = var.app_sg_name
   vpc_id = module.networking.vpc_id
 
@@ -18,7 +18,7 @@ module "app_sg" {
 }
 
 module "gogs_app" {
-  source             = "../../modules/ec2"
+  source             = "../../../modules/aws/ec2"
   ami_id             = var.ami_id
   instance_type      = var.instance_type
   subnet_id          = module.networking.public_subnet_id
@@ -38,9 +38,8 @@ data "aws_ssm_parameter" "db_password" {
   with_decryption = true
 }
 
-
 module "gogs_rds" {
-  source = "../../modules/rds"
+  source = "../../../modules/aws/rds"
   db_name = var.db_name
   db_identifier       = var.db_identifier
   db_allocated_storage = var.db_allocated_storage
